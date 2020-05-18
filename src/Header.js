@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css'
 
 const Header = function () {
-    //inline styling
+    //inline stylinggi
     // const headerStyle = {
     //     textAlign: 'center',
     //     padding: 20,
