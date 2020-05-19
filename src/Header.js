@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 
-const Header = function () {
+const Header = function (props) {
     //inline stylinggi
     // const headerStyle = {
     //     textAlign: 'center',
@@ -12,7 +12,7 @@ const Header = function () {
     // };
     return (
         <div className='header'>
-            Phone Directory
+            {props.header}
         </div>
     );
 }

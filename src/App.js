@@ -17,7 +17,7 @@ function App() {
   ];
   return (
     <div >
-      <Header />
+      <Header header= " Phone Directory"/>
       <div className="component-body-container">
         <button className="custom-btn add-btn">Add</button>
 
