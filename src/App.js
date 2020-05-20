@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header'
-import './App.css'
+import './App.css';
+
 
 function App() {
   let subscribers = [
@@ -17,7 +18,7 @@ function App() {
   ];
   return (
     <div >
-      <Header header= " Phone Directory"/>
+      <Header header=" Phone Directory" />
       <div className="component-body-container">
         <button className="custom-btn add-btn">Add</button>
 
@@ -31,7 +32,7 @@ function App() {
             <span className="grid-item ">{sub.name}</span>
             <span className="grid-item ">{sub.phone}</span>
             <span className="grid-item">
-              <button className="custom-btn delete-btn">Delete</button>
+              <button className="custom-btn delete-btn" >Delete</button>
             </span>
           </div>
         })}
