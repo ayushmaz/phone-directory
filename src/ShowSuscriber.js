@@ -1,6 +1,7 @@
 import Header from './Header'
 import './ShowSuscriber.css';
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class ShowSuscriber extends Component {
   
@@ -10,7 +11,7 @@ class ShowSuscriber extends Component {
       <div >
         <Header header=" Phone Directory" />
         <div className="component-body-container">
-          <button className="custom-btn add-btn">Add</button>
+          <Link to="/add"><button className="custom-btn add-btn">Add</button></Link>
 
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>

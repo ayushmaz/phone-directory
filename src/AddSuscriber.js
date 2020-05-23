@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import './AddSuscriber.css'
+import {Link} from 'react-router-dom'
 
 class AddSuscriber extends Component {
 
@@ -23,6 +24,7 @@ class AddSuscriber extends Component {
         e.preventDefault()
         this.props.addSuscriberHandler(this.state)
         this.setState({id: 0  , name : '' , phone : ''})
+        this.props.history.push('/')
     }
 
     render() {
@@ -31,7 +33,7 @@ class AddSuscriber extends Component {
             <div>
                 <Header header="Add Suscriber" />
                 <div className="component-body-container">
-                    <button className="custom-btn">BACK</button>
+                    <Link to="/"><button className="custom-btn">BACK</button></Link>
                     <form className="subscriber-form" onSubmit = {this.onFormSubmitted.bind(this)}>
                         <label htmlFor="name" className="label-control">Name</label><br />
                         <input type="text" id="name" className="input-control" name="name" onChange={this.inputChangedHandler}></input><br /><br />
