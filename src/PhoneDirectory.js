@@ -11,6 +11,19 @@ class PhoneDirectory extends Component {
         }
     }
 
+    deleteSuscriberHandler = (id) => {
+        let subscribersList = this.state.subscriberList
+        let subscriberIndex = 0
+        subscribersList.forEach(function(subscriber , index){
+            if(subscriber.id == id){
+                subscriberIndex = index
+            }
+        } , this)
+
+        subscribersList.splice(subscriberIndex , 1)
+        this.setState({subscriberList : subscribersList })
+    }
+
     addSuscriberHandler = (newSuscriber) => {
         let subscribersList = this.state.subscriberList;
         if (subscribersList.length > 0) {
@@ -27,7 +40,7 @@ class PhoneDirectory extends Component {
             <div>
                 <Router>
                     <div className="main-container">
-                        <Route exact path='/' render={(props) => <ShowSuscriber {...props} subscriberList={this.state.subscriberList} />} />
+                        <Route exact path='/' render={(props) => <ShowSuscriber {...props} subscriberList={this.state.subscriberList}  deleteSuscriberHandler={this.deleteSuscriberHandler}/>} />
                         <Route exact path='/add' render={({history},props) => <AddSuscriber history = {history} {...props} addSuscriberHandler={this.addSuscriberHandler} />} />
                     </div>
                 </Router>
