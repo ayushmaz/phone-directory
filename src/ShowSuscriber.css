@@ -5,6 +5,11 @@
     color: #000;
 }
 
+.edit-btn{
+    background: green;
+    color: #000;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 40% 30% auto;

@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './common/common.css'
-import ShowSuscriber from './ShowSuscriber';
-import AddSuscriber from './AddSuscriber';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import PhoneDirectory from './PhoneDirectory';
 
